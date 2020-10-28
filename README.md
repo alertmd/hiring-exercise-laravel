@@ -6,7 +6,7 @@
 This is the starter code for online multi-player Tic Tac Toe, where the board can be of arbitrary square size
 (3x3, 10x10, etc), and where the win size can be arbitrary as well (3 in a row, 6 in a row, etc). We've set up a
  basic UI for starting a game, drawing the board on the client side, so that you can focus on game play and client/server
-interaction. There are various stubs throughout the code, such as random X/Os for now, a "Find Game" button, etc. This are mostly to illustrate concepts and can be leveraged or thrown away as desired.
+interaction. There are various stubs throughout the code, such as random X/Os for now, a "Find Game" button, etc. These stubs are mostly to illustrate concepts and can be leveraged or thrown away as desired.
 
 The main laravel project code is at src/.
 

@@ -1,0 +1,161 @@
+body {
+    background-color: #1A212C;
+    color: #FFFFFF;
+    margin: 5px;
+}
+
+.header {
+    border-bottom: 1px dashed white;
+    width: 100%;
+}
+
+.header .title {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 27px;
+    padding: 10px;
+}
+
+/* WELCOME PAGE */
+.welcome-wrapper {
+    font-family: 'Press Start 2P', cursive;
+    margin-top: 100px;
+    text-align: center;
+}
+
+.welcome-header {
+    font-size: 44px;
+}
+
+.welcome-header .aas {
+    font-size: 17px;
+    opacity: 0.7;
+    margin: auto;
+    text-align: justify;
+    width: 400px;
+}
+
+.welcome-header .aas span {
+    width:100%;
+    height:1em;
+    display:inline-block;
+}
+
+.welcome-buttons-wrapper {
+    margin: auto;
+    width: 400px;
+}
+
+.welcome-button {
+    border: 1px dashed white;
+    cursor: pointer;
+    font-size: 20px;
+    margin-top: 30px;
+    opacity: 0.7;
+    padding: 20px;
+}
+
+.welcome-button:hover {
+    opacity: 1;
+}
+
+.start-game-buttons-wrapper {
+    display: flex;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 2.5s ease-out;
+    width: 400px;
+}
+
+.start-game-buttons-wrapper.show {
+    display: flex;
+    max-height: 500px;
+    opacity: 1;
+}
+
+.start-game-button {
+    border: 1px dashed white;
+    cursor: pointer;
+    display: inline-block;
+    flex: 1 1;
+    opacity: 0.7;
+    padding: 20px;
+}
+
+.start-game-button:hover {
+    opacity: 1;
+}
+
+.loading .shake-target {
+    animation-name: shake-opacity;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes shake-opacity {
+    10% {
+      transform: translate(1px, -1px) rotate(1.5deg);
+      opacity: 0.95; }
+    20% {
+      transform: translate(-3px, 0px) rotate(-1.5deg);
+      opacity: 0.25; }
+    30% {
+      transform: translate(0px, 1px) rotate(1.5deg);
+      opacity: 0.55; }
+    40% {
+      transform: translate(3px, 5px) rotate(0.5deg);
+      opacity: 0.2; }
+    50% {
+      transform: translate(-2px, -2px) rotate(0.5deg);
+      opacity: 0.44; }
+    60% {
+      transform: translate(1px, -3px) rotate(-1.5deg);
+      opacity: 0.78; }
+    70% {
+      transform: translate(0px, -4px) rotate(-0.5deg);
+      opacity: 0.62; }
+    80% {
+      transform: translate(5px, 2px) rotate(-1.5deg);
+      opacity: 0.03; }
+    90% {
+      transform: translate(-1px, -2px) rotate(2.5deg);
+      opacity: 0.17; }
+    0%, 100% {
+      transform: translate(0, 0) rotate(0); }
+}
+
+
+/* GAME PAGE */
+.game-board {
+	display: flex;
+	flex-direction: column;
+	margin: 50 auto;
+	height: 600px;
+	width: 80%;
+}
+
+.game-board .row:last-child {
+	border-bottom: 0px;
+}
+
+.game-board .row {
+	border-bottom: 1px dashed #FFFFFF;
+	display: flex;
+	flex: 1 1;
+}
+
+.game-board .cell {
+	align-items: center;
+	border-right: 1px dashed #FFFFFF;
+	display: flex;
+	flex: 1 1;
+	font-family: 'Press Start 2P', cursive;
+	font-size: 27px;
+	justify-content: center;
+	text-align: center;
+}
+
+.game-board .cell:last-child {
+	border-right: 0px;
+}

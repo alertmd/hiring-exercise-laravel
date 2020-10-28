@@ -41,3 +41,6 @@ Run `docker-compose up` and the projects will boot. You can access the home page
 - https://laravel.com/docs/8.x/blade
 - https://laravel.com/docs/8.x/controllers
 - https://laravel.com/docs/8.x/routing
+
+## Other Notes
+- JQuery is included via CDN in the head of the primary layout, note the home page on it's usage and CSRF concerns

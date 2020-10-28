@@ -27,7 +27,10 @@ We will do a retrospective after where questions include:
 ## Installation and Running
 To get started, make sure you have [Docker installed](https://docs.docker.com/docker-for-mac/install/) on your system, and then navigate to this project.
 
-Run `docker-compose up` and the projects will boot. You can access the home page via `http://localhost:8080`.
+Run `docker-compose up` and the projects will boot. You can access the home page via `http://localhost:8080`. If that conflicts with a port on your machine already bound, see the `docker-compose.yml` file to edit.
+
+You should see something like this, if the docker boot worked well:
+![Welcome Screen](/docs/welcome.png?raw=true)
 
 ## Key Project Paths
 - src/public: public asset files, such as style.css

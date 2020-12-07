@@ -8,7 +8,6 @@ services:
     build:
       context: .
       dockerfile: nginx.dockerfile
-    container_name: nginx
     ports:
       - "8080:80"
     volumes:
@@ -22,7 +21,6 @@ services:
     build:
       context: .
       dockerfile: php.dockerfile
-    container_name: php
     volumes:
       - ./src:/var/www/html:delegated
     ports:
@@ -34,7 +32,6 @@ services:
     build:
       context: .
       dockerfile: composer.dockerfile
-    container_name: composer
     volumes:
       - ./src:/var/www/html
     working_dir: /var/www/html
@@ -47,7 +44,6 @@ services:
 
   npm:
     image: node:13.7
-    container_name: npm
     volumes:
       - ./src:/var/www/html
     working_dir: /var/www/html
@@ -57,7 +53,6 @@ services:
     build:
       context: .
       dockerfile: php.dockerfile
-    container_name: artisan
     volumes:
       - ./src:/var/www/html:delegated
     working_dir: /var/www/html

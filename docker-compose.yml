@@ -43,7 +43,7 @@ services:
     user: laravel
     networks:
       - laravel
-    entrypoint: ['composer', '--ignore-platform-reqs']
+    entrypoint: ['composer', 'install', '--ignore-platform-reqs']
 
   npm:
     image: node:13.7
@@ -51,7 +51,7 @@ services:
     volumes:
       - ./src:/var/www/html
     working_dir: /var/www/html
-    entrypoint: ['npm']
+    entrypoint: ['npm', 'install']
 
   artisan:
     build:
@@ -62,6 +62,7 @@ services:
       - ./src:/var/www/html:delegated
     working_dir: /var/www/html
     user: laravel
+    restart: on-failure
     entrypoint: ['php', '/var/www/html/artisan']
     networks:
       - laravel

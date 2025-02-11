@@ -1,0 +1,18 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: hiring-exercise-laravel
+  description: Hiring exercise for roles with PHP as a primary language.
+  annotations:
+    business-unit: EverHealth
+    github.com/project-slug: alertmd/hiring-exercise-laravel
+spec:
+  type: service
+  lifecycle: production
+  owner: EverHealth
+  implementation:
+    languages:
+    - PHP
+    - Blade
+    - Shell
+    - Dockerfile
